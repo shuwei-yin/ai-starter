@@ -189,6 +189,8 @@ spec:
         volumeMounts:
           - mountPath: "$PVC_MOUNT_PATH"
             name: workspace
+      nodeSelector:
+        app: $NOTEBOOK_NAME
       volumes:
         - name: workspace
           persistentVolumeClaim:
